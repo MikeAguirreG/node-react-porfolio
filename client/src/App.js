@@ -1,15 +1,18 @@
 import React ,{ useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 
+import { Transition, animated } from "react-spring";
+import Main from "./components/Main";
+import Pages from "./components/Pages";
+import Navbar from './components/Navbar';
 const App = () => {
 
   const [values, setData] = useState();
   const getData = () => {
-    axios.get('/api')
-      .then(res => setData(res))
-      .catch(err => console.log(err)) 
+    // axios.get('/api')
+    //   .then(res => setData(res))
+    //   .catch(err => console.log(err)) 
   }
 
   React.useEffect(() => getData(), []);
@@ -17,21 +20,8 @@ const App = () => {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{JSON.stringify(values)}
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Pages />
     </div>
   );
 }
