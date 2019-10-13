@@ -32,7 +32,7 @@ const About = () => {
                 </article>
             </div>
 
-            <div className='experience grow flex-item  center'>
+            <div className='experience grow flex-item'>
                 <article className="">
                     <h1 className="f4 ">Experience</h1>
                     <div className="bt b--black-10">

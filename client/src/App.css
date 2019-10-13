@@ -25,6 +25,9 @@
   font-size:2vw;
   will-change: transform, opacity;
   text-shadow: 0px 2px 40px #00000020, 0px 2px 5px #00000030;
+  /* height: 100vh; */
+  overflow: auto;
+
 }
 
 .column-item {
@@ -46,8 +49,8 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: 93%;
-  width: 90%;
+  height: 90%;
+  width: 95%;
 }  
 .row {
   width: 10%;
@@ -84,11 +87,13 @@
   top: 10%; */
   background-color: #282c34;
   overflow: hidden;
-  width: 25%;
+  width: 35%;
+  height:80% ;
 }
 
 .experience{
-  width: 65%;
+  width: 60%;
+  height: 100%;
   color:  #282c34;
 }
 

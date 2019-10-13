@@ -12,10 +12,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const pages = [
     ({ style }) => <animated.div className={'color-change-2x'} style={{ ...style, background: '#2D4159' }}><Page1 /></animated.div>,
     ({ style }) => <animated.div style={{ ...style, background: '#279761' }}><Page2 /></animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: '#CEBC81' }}> C </animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: '#A16E83' }}> C </animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: '#B19F96' }}> C </animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: '#19181A' }}> C </animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#CEBC81' }}>Building it.. Sorry for the inconvenience! </animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#A16E83' }}>Building it.. Sorry for the inconvenience!</animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#B19F96' }}>Building it.. Sorry for the inconvenience!</animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#19181A' }}>Building it.. Sorry for the inconvenience! </animated.div>,
 ]
 
 const styleIcons = {
@@ -50,14 +50,20 @@ const Pages = () => {
         root: {
         flexGrow: 1,
         backgroundColor: '#282c34',
-        justifyContent: 'right',
-        alignItems: 'center',
+        width: '100%',
+        height: '10%',
         },
     }));
 
     const classes = useStyles();
-    const Navbar = <AppBar  className={classes.root} position="static">
-        <Tabs value={value} onChange={handleChange}>
+    const Navbar = <div>
+    <AppBar  className={classes.root} position="static">
+        <Tabs 
+            value={value} 
+            onChange={handleChange}
+            variant="scrollable"
+            scrollButtons="auto"
+        >
             <Tab label="Home" onClick={() => set(0)} />
             <Tab label="About" onClick={() => set(1)} />
             <Tab label="Portfolio" onClick={() => set(2)} />
@@ -66,6 +72,8 @@ const Pages = () => {
             <Tab label="Contact Me" onClick={() => set(5)} />
         </Tabs>
     </AppBar>
+  
+      </div>
 
 
 
