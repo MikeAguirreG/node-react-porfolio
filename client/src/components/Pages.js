@@ -1,47 +1,69 @@
 import React, { useState, useCallback } from 'react'
 import { useTransition, animated } from 'react-spring'
 import Page1 from './Page1'
+import Page2 from './Page2'
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import { makeStyles } from '@material-ui/core/styles';
 
 const pages = [
-    ({ style }) => <animated.div style={{ ...style, background: 'rgba(53, 55, 88, 0.95)' }}><Page1 /></animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: 'lightblue' }}> B </animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: 'lightgreen' }}> C </animated.div>
+    ({ style }) => <animated.div className={'color-change-2x'} style={{ ...style, background: '#2D4159' }}><Page1 /></animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#279761' }}><Page2 /></animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#CEBC81' }}> C </animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#A16E83' }}> C </animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#B19F96' }}> C </animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#19181A' }}> C </animated.div>,
 ]
 
 const styleIcons = {
     color: 'white',
     size: '2.5em',
-    className: 'next-button'
+    className: 'next-button heartbeat'
 }
+
 
 const Pages = () => {
     const [index, set] = useState(0)
-    const onClick = useCallback(() => {set(state => (state + 1) % 3); setValue(state => (state + 1) % 3)},[])
+    const onClick = useCallback(() => {set(state => (state + 1) % 6); setValue(state => (state + 1) % 6)},[])
     const transitions = useTransition(index, p => p, {
         from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
         enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
         leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
     })
 
-    const [value, setValue] = useState(0);
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
+ 
 
     const nextButton = <IconContext.Provider value={styleIcons} >
                             <FaArrowAltCircleRight onClick={onClick} />
                         </IconContext.Provider>
 
-    const Navbar = <AppBar position="static">
+
+    const [value, setValue] = useState(0);
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    const useStyles = makeStyles(theme => ({
+        root: {
+        flexGrow: 1,
+        backgroundColor: '#282c34',
+        justifyContent: 'right',
+        alignItems: 'center',
+        },
+    }));
+
+    const classes = useStyles();
+    const Navbar = <AppBar  className={classes.root} position="static">
         <Tabs value={value} onChange={handleChange}>
             <Tab label="Home" onClick={() => set(0)} />
-            <Tab label="Item Two" onClick={() => set(1)} />
-            <Tab label="Item Three" onClick={() => set(2)} />
+            <Tab label="About" onClick={() => set(1)} />
+            <Tab label="Portfolio" onClick={() => set(2)} />
+            <Tab label="Collaboration" onClick={() => set(3)} />¸
+            <Tab label="Services" onClick={() => set(4)} />¸
+            <Tab label="Contact Me" onClick={() => set(5)} />
         </Tabs>
     </AppBar>
 
