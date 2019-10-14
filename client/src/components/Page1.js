@@ -18,21 +18,23 @@ const Page1 = () => {
         <IconContext.Provider value={styleIcons}>
             <div className='flex-container column-item'>
                 <div className="row">
-                    <a href='https://github.com/MikeAguirreG'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className="flex-item"
-                    >
-                        <FaGithub />
-                    </a>
-                </div>
-                <div className="row">
                     <a href='https://www.linkedin.com/in/miguelaguirreg/'
                         target='_blank'
                         rel='noopener noreferrer'
                         className="flex-item"
+                        title="LinkedIn profile."
                     >
                         <FaLinkedin />
+                    </a>
+                </div>
+                <div className="row">
+                    <a href='https://github.com/MikeAguirreG'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className="flex-item"
+                        title="Github account."
+                    >
+                        <FaGithub />
                     </a>
                 </div>
                 <div className="row">
@@ -40,6 +42,7 @@ const Page1 = () => {
                         target='_blank'
                         rel='noopener noreferrer'
                         className="flex-item"
+                        title='Email me: agmaug@gmail.com'
                     >
                         <FaEnvelopeOpenText />
                     </a>
@@ -49,6 +52,7 @@ const Page1 = () => {
                         target="_blank"
                         rel='noopener noreferrer'
                         className="flex-item"
+                        title='Download my resume here.'
                         download
                     >
                         <FaFileDownload />

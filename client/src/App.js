@@ -7,10 +7,11 @@ const App = () => {
 
   // const [values, setData] = useState();
   // const getData = () => {
-  //   // axios.get('/api')
-  //   //   .then(res => setData(res))
-  //   //   .catch(err => console.log(err)) 
+  //   axios.get('/api')
+  //     .then(res => setData(res))
+  //     .catch(err => console.log(err)) 
   // }
+  // console.log(values)
 
   // React.useEffect(() => getData(), []);
 
