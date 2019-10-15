@@ -15,21 +15,17 @@ const About = () => {
     return (
 
         <div className='flex-container'>
-            <div className='flex-item img-div dib br3 pa2 ma2 h-40 w-20 grow bw2 shadow-6'>
-                <article className="">
-                    <img src={maag} className="db br2 br--top h-60" alt="Miguel Aguirre"></img>
-                    <div className="pa1 pb3-ns" style={{ overflow: 'auto' }}>
-                        <div className="dt w-100 mt1">
-                            <div className="dtc">
-                                <h1 className="f6 f4-ns mv0">Software Developer</h1>
-                            </div>
-                        </div>
-                        <p className="f7 w-100 lh-copy measure mt2 gray">
-                            My name is Miguel Aguirre a software developer with passion
-                            for helping others using technology.
-                </p>
-                    </div>
-                </article>
+            <div className="flex-item img-div dib br3 ma2 grow bw2 shadow-5" >
+                <div className='h-50'>
+                <img className='br2 w-100' src={maag} alt="Miguel Aguirre"/>
+                </div>
+                <div className='h-50 v-btm'>
+                    <h2 className='f6'>Miguel Aguirre</h2>
+                    <p className='f7 gray'> 
+                        My name is Miguel Aguirre a software developer with passion
+                        for helping others using technology.
+                    </p>
+                </div>
             </div>
 
             <div className='experience flex-item'>
