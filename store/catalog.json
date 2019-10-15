@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Slot Machine",
-        "description": "Slot machine simulator with debugging mode using React. Try it out!!",
+        "description": "Slot machine simulator with debugging mode. This app was created using React. Try it out!",
         "tecnologies" : ["React", "Spring React Animations", "Material-UI", "CSS","Tachyons"],
         "status" : 100,
         "link" : "https://slot-machine-app-test.herokuapp.com",

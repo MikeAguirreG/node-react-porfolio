@@ -97,8 +97,11 @@
 .portfolio-item{
   background-color: #282c34;
   overflow: hidden;
-  width: 25%;
-  height:100% ;
+  width: 45%;
+  height:90%;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
 }
 
 
