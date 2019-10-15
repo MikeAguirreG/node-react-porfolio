@@ -17,7 +17,7 @@ const About = () => {
         <div className='flex-container'>
             <div className="flex-item img-div dib br3 ma2 grow bw2 shadow-5" >
                 <div className='h-50'>
-                <img className='br2 w-100' src={maag} alt="Miguel Aguirre"/>
+                <img className='br2 h-100' src={maag} alt="Miguel Aguirre"/>
                 </div>
                 <div className='h-50 v-btm'>
                     <h2 className='f6'>Miguel Aguirre</h2>

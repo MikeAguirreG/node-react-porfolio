@@ -20,7 +20,7 @@ const Portfolio = () => {
         return projects && (
             projects.map((project, index) => (
                 <div className="flex-item portfolio-item dib br3 ma2 grow bw2 shadow-5" key={index}>
-                <img className='br2 w-100' src={`${process.env.PUBLIC_URL}/assets/images/${project.imageName}`} alt={project.name}/>
+                <img className='br2 h-50' src={`${process.env.PUBLIC_URL}/assets/images/${project.imageName}`} alt={project.name}/>
                 <div className='h-50 f6 f4-ns'>
                     <h2 className='f4'>{project.name}</h2>
                     <p className='f7 gray'>{project.description}</p>
