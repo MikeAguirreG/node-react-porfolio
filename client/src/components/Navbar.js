@@ -61,15 +61,6 @@ export default function SimpleTabs({changeState}) {
             <Tab label="Item Three" {...a11yProps(2)}  onClick={changeState(1)}/>
           </Tabs>
         </AppBar>
-        {/* <TabPanel value={value} index={0}>
-          Item One
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          Item Three
-        </TabPanel> */}
       </div>
     );
   }

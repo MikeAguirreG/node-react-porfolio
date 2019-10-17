@@ -11,7 +11,7 @@ import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
 
 const pages = [
-    ({ style }) => <animated.div className={'color-change-2x'} style={{ ...style, background: '#2D4159' }}><Page1 /></animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#2D4159' }}><Page1 /></animated.div>,
     ({ style }) => <animated.div style={{ ...style, background: '#279761' }}><Page2 /></animated.div>,
     ({ style }) => <animated.div style={{ ...style, background: '#CEBC81' }}><Page3/></animated.div>,
     ({ style }) => <animated.div style={{ ...style, background: '#A16E83' }}>Building it.. Sorry for the inconvenience!</animated.div>,
