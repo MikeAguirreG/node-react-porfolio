@@ -62,10 +62,10 @@
 
 .page-2 .img-div {
   background-color: #282c34;
-  overflow: hidden;
+  /* overflow: hidden; */
   flex: 1;
   height: 50vh;
-  vertical-align: middle;
+
 }
 
 .page-2 .img-div .img-column{
