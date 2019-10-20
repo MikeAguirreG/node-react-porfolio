@@ -66,24 +66,24 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 95vh;
+  height: 100vh;
   flex-wrap: wrap;
   flex:1;
 }
 .page-2 .img-column .img-div {
-  height: 55vh;
+  height: 30vh;
   padding: 1vh;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .page-2 .img-column .img-div .profile-image{
   height: 30vh;
 }
-.page-2 .img-column .img-div .text-img{
-  height: 25vh;
+.page-2 .img-column .topics .text-img{
+  /* height: 25vh; */
   color: #282c34;
   margin: 1vh;
 }
@@ -93,7 +93,7 @@
 }
 
 .page-2 .img-column .topics{
-  height: 40vh;
+  height: 70vh;
   padding: 1vh;
 }
 .page-2 .img-column .topics  >h2{

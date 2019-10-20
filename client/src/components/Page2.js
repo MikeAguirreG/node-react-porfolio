@@ -26,29 +26,30 @@ const About = () => {
 
   const styleIcons1 = {
     size: "3em",
-    color: '282c34',
+    color: '#282c34',
   };
   return (
     <div className="page-2">
      <div className="img-column">
-      <div className="img-div">
-          <div className="profile-image pa1">
+
+
+      <div className="img-div pa2">
+          {/* <div className="profile-image pa2"> */}
             <img className="h-100 br3 ba b--black bw2" src={maag} alt="Miguel Aguirre" />
-          </div>
-          <div className="text-img pa1">
+          {/* </div> */}
+      </div>
+
+
+      <div className="topics">
+
+      <div className="text-img pa1">
             <h2>Miguel Aguirre</h2>
             <h3>Software Developer</h3>
             <p>
               My name is Miguel Aguirre a software developer with passion for
               helping others using technology.
             </p>
-          </div>
-
-        
       </div>
-
-
-      <div className="topics">
 
       <div className="row-icons v-btm">
           <IconContext.Provider value={styleIcons1}>
