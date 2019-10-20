@@ -57,7 +57,7 @@ const Pages = () => {
     }));
 
     const classes = useStyles();
-    const Navbar = <div>
+    const Navbar = 
     <AppBar  className={classes.root} position="static">
         <Tabs 
             value={value} 
@@ -73,10 +73,6 @@ const Pages = () => {
             <Tab label="Contact Me" onClick={() => set(5)} />
         </Tabs>
     </AppBar>
-  
-      </div>
-
-
 
     return (
         <div>
@@ -89,7 +85,8 @@ const Pages = () => {
                         style={props}
                     />
                 })
-                } </div>
+                } 
+            </div>
         </div>
     )
 }

@@ -14,18 +14,19 @@ const Portfolio = () => {
     React.useEffect(() => fetchProjects(), []);
     //Icon Syzing
     const styleIcons = {
-        size: '1.2em'
+        size: '1.2em',
+        color: 'white',
     }
     const getCatalogs = () => {
         return projects && (
             projects.map((project, index) => (
-                <div className="flex-item portfolio-item dib br3 ma2 grow bw2 shadow-5" key={index}>
+                <div className="portfolio-item dib br3 ba ma2 grow bw2 shadow-5" key={index}>
                 <img className='br2 h-50' src={`${process.env.PUBLIC_URL}/assets/images/${project.imageName}`} alt={project.name}/>
                 <div className='h-50 f6 f4-ns'>
                     <h2 className='f4'>{project.name}</h2>
-                    <p className='f7 gray'>{project.description}</p>
+                    <p className='f7'>{project.description}</p>
                     <h2 className='f5'>Stack</h2>
-                    <p className='f7 gray'>{project.tecnologies.map((e) => `#${e} `)}</p>
+                    <p className='f7'>{project.tecnologies.map((e) => `#${e} `)}</p>
                     <div className="tc">
                          <IconContext.Provider value={styleIcons}>
                              <a href={project.link}
@@ -55,7 +56,7 @@ const Portfolio = () => {
 
 
     return (
-        <div className='flex-container'>
+        <div className='page-3'>
             {getCatalogs()}
         </div>
     )
