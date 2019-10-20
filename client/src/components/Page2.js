@@ -33,15 +33,12 @@ const About = () => {
      <div className="img-column">
 
 
-      <div className="img-div pa2">
-          {/* <div className="profile-image pa2"> */}
+      <div className="img-div v-btm">
             <img className="h-100 br3 ba b--black bw2" src={maag} alt="Miguel Aguirre" />
-          {/* </div> */}
       </div>
 
 
-      <div className="topics">
-
+      <div className="topics v-btm">
       <div className="text-img pa1">
             <h2>Miguel Aguirre</h2>
             <h3>Software Developer</h3>
@@ -120,6 +117,11 @@ const About = () => {
         </div>
       </div>
       </div>
+
+
+
+
+
    
       <div className="experience-div">
       <h2>Experience</h2>

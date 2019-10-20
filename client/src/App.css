@@ -61,13 +61,13 @@
 }
 
 .page-2 .img-column{
-  display: flex;
+  /* display: flex;
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
-  height: 100vh;
-  flex-wrap: wrap;
+  text-align: center; */
+  /* height: 90%; */
+  /* flex-wrap: wrap; */
   flex:1;
 }
 .page-2 .img-column .img-div {
@@ -203,6 +203,15 @@
     align-items: center;
     flex-wrap: wrap;
   }
+  .page-2 .img-column{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    /* height: 90vh; */
+  }
+  
 
 }
 
