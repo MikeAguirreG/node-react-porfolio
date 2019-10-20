@@ -30,22 +30,28 @@ const About = () => {
   };
   return (
     <div className="page-2">
-      <div className="img-div dtc v-mid pa3 br3 ma2 grow bw2 shadow-5">
-        <div className="dt-row">
-          <div className="dtc v-mid pa1">
-            <img className="br2 h-40" src={maag} alt="Miguel Aguirre" />
+     <div className="img-column">
+      <div className="img-div">
+          <div className="profile-image pa1">
+            <img className="h-100 br3 ba b--black bw2" src={maag} alt="Miguel Aguirre" />
           </div>
-          <div className="dtc v-mid pa1">
-            <h2 className="f6">Miguel Aguirre</h2>
-            <h2 className="f7 light-silver">Software Developer</h2>
-            <p className="f7 moon-gray">
+          <div className="text-img pa1">
+            <h2>Miguel Aguirre</h2>
+            <h3>Software Developer</h3>
+            <p>
               My name is Miguel Aguirre a software developer with passion for
               helping others using technology.
             </p>
           </div>
-        </div>
-        <div className="row-icons v-btm">
-          <IconContext.Provider value={styleIcons}>
+
+        
+      </div>
+
+
+      <div className="topics">
+
+      <div className="row-icons v-btm">
+          <IconContext.Provider value={styleIcons1}>
                         <div className="icon">
                             <a href='https://www.linkedin.com/in/miguelaguirreg/'
                                 target='_blank'
@@ -88,7 +94,30 @@ const About = () => {
                             </a>
                         </div>
                 </IconContext.Provider>
+            </div>
+
+
+
+      <h2>I have worked doing</h2>
+      <div className="topics-list">
+        <p class="">
+         &bull; Software Development
+         &bull; Software Engineering
+         &bull; Code Analysis
+         &bull; QA
+         &bull; IT Banking Infraestructure
+         &bull; IT Consulting
+         &bull; Linux Server Configuration
+         &bull; Agile Methodologies
+         &bull; JWT
+         &bull; MVC Architecture
+         &bull; OOP
+         &bull; IT Management
+         &bull; Web Development
+         &bull; Technical Leader
+        </p>
         </div>
+      </div>
       </div>
    
       <div className="experience-div">
@@ -166,28 +195,10 @@ const About = () => {
         </div>
 
 
-        <h2>Main topics I have worked with</h2>
-        <div className="experience-column">
-        <ul class="list ">
-         <li class="dib mr4">&bull;Software Development</li>
-         <li class="dib mr4">&bull;Software Engineering</li>
-         <li class="dib mr4">&bull;Code Analysis</li>
-         <li class="dib mr4">&bull;QA</li>
-         <li class="dib mr4">&bull;IT Banking Infraestructure</li>
-         <li class="dib mr4">&bull;IT Consulting</li>
-         <li class="dib mr4">&bull;Linux Server Configuration</li>
-         <li class="dib mr4">&bull;Agile Methodologies</li>
-         <li class="dib mr4">&bull;JWT</li>
-         <li class="dib mr4">&bull;MVC Architecture</li>
-         <li class="dib mr4">&bull;POO</li>
-         <li class="dib mr4">&bull;IT Management</li>
-         <li class="dib mr4">&bull;Web Development</li>
-         <li class="dib mr4">&bull;Technical Leader</li>
-        </ul>
-        </div>
-
+        
     
-        <h2>Stack</h2>  
+        <h2>Stack</h2>
+        <div className="row-icons v-btm">
         <div className="experience-column">
         <IconContext.Provider value={styleIcons1}>
               <DiJavascript1 />
@@ -206,27 +217,9 @@ const About = () => {
             </IconContext.Provider>
         </div>
         </div>
+        </div>
 
-{/*       
-        <h3>Stack</h3>
-        <div className="">
-        <IconContext.Provider value={styleIcons}>
-              <DiJavascript1 />
-              <DiReact />
-              <DiNodejs />
-              <DiMongodb />
-              <DiGit />
-              <DiPhp />
-              <DiCss3 />
-              <DiSass />
-              <DiJava />
-              <DiCodeigniter />
-              <DiBootstrap />
-              <DiMysql />
-            </IconContext.Provider>
-        </div> */}
 
-        
 
        
     </div>
