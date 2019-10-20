@@ -12,7 +12,8 @@ import {
   DiSass,
   DiJava,
   DiCodeigniter,
-  DiBootstrap
+  DiBootstrap,
+  DiDocker
 } from "react-icons/di";
 import { IconContext } from "react-icons";
 import { FaLinkedin, FaGithub, FaEnvelopeOpenText, FaFileDownload } from 'react-icons/fa';
@@ -23,6 +24,10 @@ const About = () => {
     color: 'white',
   };
 
+  const styleIcons1 = {
+    size: "3em",
+    color: '282c34',
+  };
   return (
     <div className="page-2">
       <div className="img-div dtc v-mid pa3 br3 ma2 grow bw2 shadow-5">
@@ -89,8 +94,8 @@ const About = () => {
       <div className="experience-div">
       <h2>Experience</h2>
       <div className="experience-column">
-          <div className="experience-item v-mid  br3 ma2 grow bw2 ba shadow-5">
-          <h5 className="f6">
+          <div className="experience-item v-mid  br3 ma2  bw2 ba shadow-5">
+            <h5 className="f6">
               Software Engineer / IT Specialist at Softtek | May 2018 – Jun 2019
             </h5>
             <p className="f7">
@@ -99,8 +104,8 @@ const About = () => {
               MVC, CSS, Javascript, Single Sign On, IT Management.
             </p>
         </div>
-        <div className="experience-item  v-mid  br3 ma2 grow bw2 ba shadow-5">
-        <h5 className="f6">
+        <div className="experience-item  v-mid  br3 ma2  bw2 ba shadow-5">
+             <h5 className="f6">
               Web Developer / IT PM at Matec | Mar 2017 – April 2018
             </h5>
             <p className="f7 ">
@@ -110,8 +115,8 @@ const About = () => {
         </div>
         </div>
         <div className="experience-column">
-          <div className="experience-item   br3 ma2 grow bw2 ba shadow-5">
-          <h5 className="f6">
+          <div className="experience-item   br3 ma2  bw2 ba shadow-5">
+            <h5 className="f6">
             IT Administrator / Web Developer at Proser | Jan 2011 – Jul 2014
             </h5>
             <p className="f7">
@@ -120,8 +125,8 @@ const About = () => {
               Mysql, Codeigniter.
             </p>
         </div>
-        <div className="experience-item  v-mid  br3 ma2 grow bw2 ba shadow-5">
-        <h5 className="f6">
+        <div className="experience-item  v-mid  br3 ma2  bw2 ba shadow-5">
+            <h5 className="f6">
               Software Developer - Freelancing | 2018 – 2019
             </h5>
             <p className="f7">
@@ -133,15 +138,15 @@ const About = () => {
 
         <h2>Education</h2>
         <div className="experience-column">
-          <div className="experience-item   br3 ma2 grow bw2 ba shadow-5">
+          <div className="education-item br3 ma2 bw2 ba shadow-5">
           <h5 className="f6">
             Bachelor Degree Information Systems
             </h5>
             <p className="f7">
-            University of Guanajuato Guanajuato, México | 2011-2017
+            University of Guanajuato Guanajuato, México | 2011-2017
             </p>
         </div>
-        <div className="experience-item  v-mid  br3 ma2 grow bw2 ba shadow-5">
+        <div className="education-item  v-mid  br3 ma2 bw2 ba shadow-5">
         <h5 className="f6">
               Computer Science
             </h5>
@@ -150,23 +155,62 @@ const About = () => {
             Frankfurt, Germany | 2015-2017
             </p>
         </div>
-        <div className="experience-item  v-mid  br3 ma2 grow bw2 ba shadow-5">
+        <div className="education-item  v-mid  br3 ma2 bw2 ba shadow-5">
         <h5 className="f6">
               Informatic Technician
             </h5>
             <p className="f7">
-            CBTis 172 Guanajuato, México | 2007-2010
+            CBTis 172 Guanajuato, México | 2007-2010
             </p>
         </div>
         </div>
+
+
+        <h2>Main topics I have worked with</h2>
+        <div className="experience-column">
+        <ul class="list ">
+         <li class="dib mr4">&bull;Software Development</li>
+         <li class="dib mr4">&bull;Software Engineering</li>
+         <li class="dib mr4">&bull;Code Analysis</li>
+         <li class="dib mr4">&bull;QA</li>
+         <li class="dib mr4">&bull;IT Banking Infraestructure</li>
+         <li class="dib mr4">&bull;IT Consulting</li>
+         <li class="dib mr4">&bull;Linux Server Configuration</li>
+         <li class="dib mr4">&bull;Agile Methodologies</li>
+         <li class="dib mr4">&bull;JWT</li>
+         <li class="dib mr4">&bull;MVC Architecture</li>
+         <li class="dib mr4">&bull;POO</li>
+         <li class="dib mr4">&bull;IT Management</li>
+         <li class="dib mr4">&bull;Web Development</li>
+         <li class="dib mr4">&bull;Technical Leader</li>
+        </ul>
         </div>
 
-        {/* <div className="">
+    
+        <h2>Stack</h2>  
+        <div className="experience-column">
+        <IconContext.Provider value={styleIcons1}>
+              <DiJavascript1 />
+              <DiReact />
+              <DiNodejs />
+              <DiMongodb />
+              <DiDocker />
+              <DiGit />
+              <DiPhp />
+              <DiCss3 />
+              <DiSass />
+              <DiJava />
+              <DiCodeigniter />
+              <DiBootstrap />
+              <DiMysql />
+            </IconContext.Provider>
+        </div>
+        </div>
 
-        
-          <div className="bt b--black-10">
-            <h1 className="f4 ">I can work with the following technologies:</h1>
-            <IconContext.Provider value={styleIcons}>
+{/*       
+        <h3>Stack</h3>
+        <div className="">
+        <IconContext.Provider value={styleIcons}>
               <DiJavascript1 />
               <DiReact />
               <DiNodejs />
@@ -180,8 +224,11 @@ const About = () => {
               <DiBootstrap />
               <DiMysql />
             </IconContext.Provider>
-          </div>
-      </div> */}
+        </div> */}
+
+        
+
+       
     </div>
   );
 };
