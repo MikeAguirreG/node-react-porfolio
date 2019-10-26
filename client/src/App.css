@@ -185,7 +185,12 @@
   border-color: #f50057
 }
 
-
+/* contact me */
+.page-6{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 /* Media query for pages */
 @media (min-width: 900px) {
@@ -200,6 +205,11 @@
     align-items: center;
   }
   .page-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .page-6 {
     display: flex;
     flex-direction: row;
     align-items: center;

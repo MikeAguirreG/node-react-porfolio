@@ -1,8 +1,9 @@
 import React, { useState, useCallback } from 'react'
 import { useTransition, animated } from 'react-spring'
-import Page1 from './Page1'
-import Page2 from './Page2'
-import Page3 from './Page3'
+import Home from './Home'
+import About from './About'
+import Portfolio from './Portfolio'
+import Contact from './Contact'
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import AppBar from '@material-ui/core/AppBar';
@@ -11,12 +12,12 @@ import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
 
 const pages = [
-    ({ style }) => <animated.div style={{ ...style, background: '#2D4159' }}><Page1/></animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: '#ccc' }}><Page2/></animated.div>, //'#279761'
-    ({ style }) => <animated.div style={{ ...style, background: '#CEBC81' }}><Page3/></animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#2D4159' }}><Home/></animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#ccc'    }}><About/></animated.div>, //'#279761'
+    ({ style }) => <animated.div style={{ ...style, background: '#CEBC81' }}><Portfolio/></animated.div>,
     ({ style }) => <animated.div style={{ ...style, background: '#A16E83' }}>Building it.. Sorry for the inconvenience!</animated.div>,
     ({ style }) => <animated.div style={{ ...style, background: '#B19F96' }}>Building it.. Sorry for the inconvenience!</animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: '#19181A' }}>Building it.. Sorry for the inconvenience! </animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: '#707070' }}><Contact/></animated.div>,
 ]
 
 const styleIcons = {

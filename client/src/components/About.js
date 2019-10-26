@@ -1,22 +1,7 @@
 import React from "react";
 import maag from "../images/maag.jpg";
-import {
-  DiMysql,
-  DiMongodb,
-  DiReact,
-  DiNodejs,
-  DiGit,
-  DiJavascript1,
-  DiPhp,
-  DiCss3,
-  DiSass,
-  DiJava,
-  DiCodeigniter,
-  DiBootstrap,
-  DiDocker
-} from "react-icons/di";
-import { IconContext } from "react-icons";
-import { FaLinkedin, FaGithub, FaEnvelopeOpenText, FaFileDownload } from 'react-icons/fa';
+import ContactIcons  from './ContactIcons'
+import Stack from './Stack'
 
 const About = () => {
   const styleIcons = {
@@ -49,52 +34,8 @@ const About = () => {
       </div>
 
       <div className="row-icons v-btm">
-          <IconContext.Provider value={styleIcons1}>
-                        <div className="icon">
-                            <a href='https://www.linkedin.com/in/miguelaguirreg/'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                className="flex-item"
-                                title="LinkedIn profile."
-                            >
-                                <FaLinkedin />
-                            </a>
-                        </div>
-                        <div className="icon">
-                            <a href='https://github.com/MikeAguirreG'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                className="flex-item"
-                                title="Github account."
-                            >
-                                <FaGithub />
-                            </a>
-                        </div>
-                        <div className="icon">
-                            <a href='mailto:agmaug@gmail.com'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                className="flex-item"
-                                title='Email me: agmaug@gmail.com'
-                            >
-                                <FaEnvelopeOpenText />
-                            </a>
-                        </div>
-                        <div className="icon">
-                            <a href="https://github.com/MikeAguirreG/resume_files/raw/master/Resume_MiguelAguirreG.pdf"
-                                target="_blank"
-                                rel='noopener noreferrer'
-                                className="flex-item"
-                                title='Download my resume here.'
-                                download
-                            >
-                                <FaFileDownload />
-                            </a>
-                        </div>
-                </IconContext.Provider>
-            </div>
-
-
+        <ContactIcons styleIcons={styleIcons1}/>
+      </div>
 
       <h2>I have worked doing</h2>
       <div className="topics-list">
@@ -112,17 +53,12 @@ const About = () => {
          &bull; OOP
          &bull; IT Management
          &bull; Web Development
-         &bull; Technical Leader
+         &bull; IT Specialist
         </p>
         </div>
       </div>
       </div>
 
-
-
-
-
-   
       <div className="experience-div">
       <h2>Experience</h2>
       <div className="experience-column">
@@ -203,21 +139,7 @@ const About = () => {
         <h2>Stack</h2>
         <div className="row-icons v-btm">
         <div className="experience-column">
-        <IconContext.Provider value={styleIcons1}>
-              <DiJavascript1 />
-              <DiReact />
-              <DiNodejs />
-              <DiMongodb />
-              <DiDocker />
-              <DiGit />
-              <DiPhp />
-              <DiCss3 />
-              <DiSass />
-              <DiJava />
-              <DiCodeigniter />
-              <DiBootstrap />
-              <DiMysql />
-            </IconContext.Provider>
+        <Stack  styleIcons={styleIcons1}/>
         </div>
         </div>
         </div>

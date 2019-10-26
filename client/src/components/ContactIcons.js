@@ -2,21 +2,7 @@ import React from 'react'
 import { FaLinkedin, FaGithub, FaEnvelopeOpenText, FaFileDownload } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
-
-const Page1 = () => {
-
-    const styleIcons = {
-        color: 'white',
-        size: '4em',
-        className : ''
-        // className: 'bounce-top'
-    }
-
-    return (<div className='page-1'>
-                <div className='column-item name'>
-                <h1>Miguel Aguirre | Software Developer</h1>
-                </div>
-                <div className='column-item row-icons'>
+const ContactIcons = ({styleIcons}) => (
                 <IconContext.Provider value={styleIcons}>
                         <div className="icon">
                             <a href='https://www.linkedin.com/in/miguelaguirreg/'
@@ -60,12 +46,5 @@ const Page1 = () => {
                             </a>
                         </div>
                 </IconContext.Provider>
-                </div>
-                <div className='column-item phrase'>
-                <h2>Please, take a look at my work!  </h2>
-                </div>
-                
-    </div>
-    )
-}
-export default Page1;
+)
+export default ContactIcons
