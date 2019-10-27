@@ -1,32 +1,43 @@
 import React, { useState } from 'react'
 import ContactIcons from './ContactIcons'
 import axios from 'axios'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles , withStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import PropTypes from "prop-types";
 
 
-
-const useStyles = makeStyles(theme => ({
+  const styles = {
     root: {
-      display: 'flex',
-      flexWrap: 'wrap',
+    //   background: "gray",
+      borderRadius: 3,
     },
-    margin: {
-      margin: theme.spacing(1),
+    input: {
+      color: "white",
+      borderWidth: '1px',
+      borderColor: '#f50057 !important'
     },
-    button: {
-      margin: theme.spacing(1),
+    button:{
+        background: 'linear-gradient(45deg, #282c34 30%, black 90%)',
+        borderRadius: 3,
+        border: 0,
+        color: 'white',
+        height: 48,
+        padding: '0 30px',
+        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     },
-  }));
+    notchedOutline: {
+        borderWidth: '1px',
+        borderColor: '#f50057 !important',
+        color: "white !important",
+    },
+    floatingLabelFocusStyle:{
+        color: "#f50057 !important"
+    }
+  };
 
-const Contact = () => {
-    const classes = useStyles({
-        input: {
-            color: 'white',
-            backgroundColor: 'red'
-        }
-    });
+const Contact = ({classes}) => {
+    // const classes = useStyles();
     const styleIcons = {
         color: 'black',
         size: '2.5em',
@@ -38,9 +49,10 @@ const Contact = () => {
         message:'',
         errorName:'',
         errorEmail:'',
-        errorMessage:''
+        errorMessage:'',
+        messageResponse: ''
     })
-    const { name, email, message , errorName, errorEmail, errorMessage } = values
+    const { name, email, message , errorName, errorEmail, errorMessage, messageResponse } = values
 
     const handleChange = name => event => {
         setValues({...values, [name] : event.target.value})
@@ -77,17 +89,21 @@ const Contact = () => {
         event.preventDefault()
         const isValid = validateForm()
         if(isValid)
-            axios.post('api/sendEmail' , {name, email, message})
-                 .then(()=>{
+            axios.post('api/sendmail' , {name, email, message})
+                 .then((success)=>{
                     setValues({
                         ...values, 
                         name:'', 
                         email: '', 
-                        message: ''
+                        message: '',
+                        messageResponse: success.data
                     })
                  })
-                 .catch(()=>{
-
+                 .catch((error)=>{
+                    setValues({
+                        ...values, 
+                        messageResponse: error.response.data
+                    })
                  })
     }
   
@@ -103,53 +119,63 @@ const Contact = () => {
                 placeholder="Name."
                 error={errorName ? true : false}
                 label="Type your name"
-                className={classes.textField}
                 margin="normal"
                 variant="outlined"
                 helperText={errorName}
-                InputProps={{className: classes.input}}
+                className={classes.root}
+                InputProps={{classes: {notchedOutline: classes.notchedOutline}}}
+                InputLabelProps={{className: classes.floatingLabelFocusStyle}}
             />
             <br/>
             <TextField 
                 name='email'
                 onChange={handleChange('email')}
-                type='email'
+                // type='email'
                 value={email}
                 placeholder="Email."
                 error={errorEmail ? true : false}
                 label="Type your email"
-                className={classes.textField}
                 margin="normal"
                 variant="outlined"
                 helperText={errorEmail}
+                className={classes.root}
+                InputProps={{classes: {notchedOutline: classes.notchedOutline}}}
+                InputLabelProps={{className: classes.floatingLabelFocusStyle}}
             />
             <br/>
             <TextField 
                 name='message'
                 onChange={handleChange('message')}
                 value={message}
-                rows="5"
+                rows="8"
                 multiline
                 placeholder="Message."
                 error={errorMessage ? true : false}
-                label="Write me your message"
-                className={classes.textField}
+                label="Write me a message"
                 margin="normal"
                 variant="outlined"
                 helperText={errorMessage}
+                className={classes.root}
+                InputProps={{classes: {notchedOutline: classes.notchedOutline}}}
+                InputLabelProps={{className: classes.floatingLabelFocusStyle}}
             />
+            <br/>
             <br/>
             <Button 
                 type='submit'
+                classes={{root: classes.button}}
             >
             Send Message
             </Button>
             </form>
             <br/>
+            <div>{messageResponse}</div>
             <div className="row-icons v-btm">
             <ContactIcons styleIcons={styleIcons} />
             </div>
         </div>
     )
 }
-export default Contact
+
+Contact.propTypes = {classes: PropTypes.object.isRequired};  
+export default withStyles(styles)(Contact)

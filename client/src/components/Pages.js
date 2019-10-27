@@ -17,7 +17,7 @@ const pages = [
     ({ style }) => <animated.div style={{ ...style, background: '#CEBC81' }}><Portfolio/></animated.div>,
     ({ style }) => <animated.div style={{ ...style, background: '#A16E83' }}>Building it.. Sorry for the inconvenience!</animated.div>,
     ({ style }) => <animated.div style={{ ...style, background: '#B19F96' }}>Building it.. Sorry for the inconvenience!</animated.div>,
-    ({ style }) => <animated.div style={{ ...style, background: '#707070' }}><Contact/></animated.div>,
+    ({ style }) => <animated.div style={{ ...style, background: 'white' }}><Contact/></animated.div>,
 ]
 
 const styleIcons = {
