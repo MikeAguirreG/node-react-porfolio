@@ -16,7 +16,7 @@ import {
   } from "react-icons/di";
   import { IconContext } from "react-icons";
 
-const Stack = (styleIcons) => (
+const Stack = ({styleIcons}) => (
     <IconContext.Provider value={styleIcons}>
         <DiJavascript1 />
         <DiReact />
