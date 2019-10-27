@@ -10,7 +10,7 @@ exports.template = ({name, email, message}) => (
                </br>
                <p>Your message: ${message}</p>
                </br>
-               <h5>I will back to you as soon as possible.</h5>
+               <h5>I will be back to you as soon as possible.</h5>
                <h4>Thanks for your message!</h4>
                `  
     }
