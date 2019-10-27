@@ -8,6 +8,7 @@ const App = () => {
 
   useEffect(() => {
     ReactGA.initialize('UA-151021167-1');
+    ReactGA.pageview('/homepage');
   }, [])
   
   return (
