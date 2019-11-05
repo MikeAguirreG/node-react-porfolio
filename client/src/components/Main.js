@@ -1,5 +1,5 @@
-import React from "react";
-import { Spring } from "react-spring/renderprops";
+import React from 'react';
+import { Spring } from 'react-spring/renderprops';
 
 export default function Component1() {
   return (
@@ -36,15 +36,15 @@ export default function Component1() {
 }
 
 const c1Style = {
-  background: "steelblue",
-  color: "white",
-  padding: "1.5rem"
+  background: 'steelblue',
+  color: 'white',
+  padding: '1.5rem'
 };
 
 const counter = {
-  background: "#333",
-  textAlign: "center",
-  width: "100px",
-  borderRadius: "50%",
-  margin: "1rem auto"
+  background: '#333',
+  textAlign: 'center',
+  width: '100px',
+  borderRadius: '50%',
+  margin: '1rem auto'
 };

@@ -1,57 +1,68 @@
 [
-    {
-        "id": 1,
-        "name": "Slot Machine",
-        "description": "Slot machine simulator with debugging mode. This app was created using React. Try it out!",
-        "tecnologies" : ["React", "Spring React Animations", "Material-UI", "CSS","Tachyons"],
-        "status" : 100,
-        "link" : "https://slot-machine-app-test.herokuapp.com",
-        "git" : "https://github.com/MikeAguirreG/slot_machine",
-        "imageName": "slot-machine.png"
-    },
-    {
-        "id": 2,
-        "name": "Blogging App",
-        "description": "Blogging App created with Node.js, Express, MongoDB. This app was created to provide free blogging services.",
-        "tecnologies" : ["Node.js", "Express", "CSS", "MongoDB", "JWT", "Sendgrid"],
-        "status" : 100,
-        "link" : "https://blog-app-platform.herokuapp.com",
-        "git" : "https://github.com/MikeAguirreG/bloggingapp",
-        "imageName": "blogging-app.png"
-    },
-    {
-        "id": 3,
-        "name": "Ecommerce Platform",
-        "description": "Ecommerce platform created witn React and Node.js, using Paypal as parment service.",
-        "tecnologies" : ["Node.js", "Express", "React", "MongoDB", "JWT", "CSS", "Paypal", "Sendgrid","Bootstrap"],
-        "status" : 65,
-        "link" : "",
-        "git" : "",
-        "imageName": "in-progress.png"
-
-    },
-    {
-        "id": 4,
-        "name": "POS System",
-        "description": "Point of sale system created using PHP and Codeigniter, used to provide services to a veterinary company.",
-        "tecnologies" : ["PHP", "JS", "CSS", "Mysql", "Bootstrap", "Codeigniter"],
-        "status" : 100,
-        "link" : "",
-        "git" : "",
-        "imageName": "pos-system.png"
-
-    },
-    {
-        "id": 5,
-        "name": "Chat One to One",
-        "description": "Chat created using Socket.io to provide communication one to one to users online of a bloggin-app",
-        "tecnologies" : ["Socket.io", "JS", "Node.js", "CSS", "HTML"],
-        "status" : 100,
-        "link" : "https://blog-app-platform.herokuapp.com",
-        "git" : "https://github.com/MikeAguirreG/bloggingapp",
-        "imageName": "chat.png"
-
-    }
+  {
+    "id": 1,
+    "name": "Slot Machine",
+    "description": "Slot machine simulator with debugging mode. This app was created using React. Try it out!",
+    "tecnologies": [
+      "React",
+      "Spring React Animations",
+      "Material-UI",
+      "CSS",
+      "Tachyons"
+    ],
+    "status": 100,
+    "link": "https://slot-machine-app-test.herokuapp.com",
+    "git": "https://github.com/MikeAguirreG/slot_machine",
+    "imageName": "slot-machine.png"
+  },
+  {
+    "id": 2,
+    "name": "Blogging App",
+    "description": "Blogging App created with Node.js, Express, MongoDB. This app was created to provide free blogging services.",
+    "tecnologies": ["Node.js", "Express", "CSS", "MongoDB", "JWT", "Sendgrid"],
+    "status": 100,
+    "link": "https://blog-app-platform.herokuapp.com",
+    "git": "https://github.com/MikeAguirreG/bloggingapp",
+    "imageName": "blogging-app.png"
+  },
+  {
+    "id": 3,
+    "name": "Ecommerce Platform",
+    "description": "Ecommerce platform created witn React and Node.js, using Paypal as parment service.",
+    "tecnologies": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB",
+      "JWT",
+      "CSS",
+      "Paypal",
+      "Sendgrid",
+      "Bootstrap"
+    ],
+    "status": 65,
+    "link": "",
+    "git": "",
+    "imageName": "in-progress.png"
+  },
+  {
+    "id": 4,
+    "name": "POS System",
+    "description": "Point of sale system created using PHP and Codeigniter, used to provide services to a veterinary company.",
+    "tecnologies": ["PHP", "JS", "CSS", "Mysql", "Bootstrap", "Codeigniter"],
+    "status": 100,
+    "link": "",
+    "git": "",
+    "imageName": "pos-system.png"
+  },
+  {
+    "id": 5,
+    "name": "Chat One to One",
+    "description": "Chat created using Socket.io to provide communication one to one to users online of a bloggin-app",
+    "tecnologies": ["Socket.io", "JS", "Node.js", "CSS", "HTML"],
+    "status": 100,
+    "link": "https://blog-app-platform.herokuapp.com",
+    "git": "https://github.com/MikeAguirreG/bloggingapp",
+    "imageName": "chat.png"
+  }
 ]
-
-
