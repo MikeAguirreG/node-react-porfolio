@@ -1,5 +1,15 @@
 [
   {
+    "id": 0,
+    "name": "ERP Platform for PROSER",
+    "description": "Main purpose of this project is to create an ERP platform based in modules to help PROSER Veterinaries to manage their everyday activities.",
+    "tecnologies": ["React", "JS", "Node.js", "Mysql", "CSS", "HTML"],
+    "status": 15,
+    "link": "",
+    "git": "",
+    "imageName": "in-progress.png"
+  },
+  {
     "id": 1,
     "name": "Slot Machine",
     "description": "Slot machine simulator with debugging mode. This app was created using React. Try it out!",
@@ -28,7 +38,7 @@
   {
     "id": 3,
     "name": "Ecommerce Platform",
-    "description": "Ecommerce platform created witn React and Node.js, using Paypal as parment service.",
+    "description": "Ecommerce platform created witn React and Node.js, using Braintree to handle, Paypal and CreditCard Payments.",
     "tecnologies": [
       "Node.js",
       "Express",
@@ -38,12 +48,13 @@
       "CSS",
       "Paypal",
       "Sendgrid",
-      "Bootstrap"
+      "React-Bootstrap",
+      "Braintree"
     ],
-    "status": 65,
-    "link": "",
+    "status": "BETA",
+    "link": "https://ecommerce-proser.herokuapp.com/",
     "git": "",
-    "imageName": "in-progress.png"
+    "imageName": "ecommerce.png"
   },
   {
     "id": 4,
