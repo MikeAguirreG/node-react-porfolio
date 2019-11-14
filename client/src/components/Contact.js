@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import ContactIcons from './ContactIcons';
-import axios from 'axios';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import ContactIcons from "./ContactIcons";
+import axios from "axios";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import PropTypes from "prop-types";
 
 const styles = {
   root: {
@@ -12,44 +12,44 @@ const styles = {
     borderRadius: 3
   },
   input: {
-    color: 'white',
-    borderWidth: '1px',
-    borderColor: '#f50057 !important'
+    color: "white",
+    borderWidth: "1px",
+    borderColor: "#f50057 !important"
   },
   button: {
-    background: 'linear-gradient(45deg, #282c34 30%, black 90%)',
+    background: "linear-gradient(45deg, #282c34 30%, black 90%)",
     borderRadius: 3,
     border: 0,
-    color: 'white',
+    color: "white",
     height: 48,
-    padding: '0 30px',
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)'
+    padding: "0 30px",
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)"
   },
   notchedOutline: {
-    borderWidth: '1px',
-    borderColor: '#f50057 !important',
-    color: 'white !important'
+    borderWidth: "1px",
+    borderColor: "#f50057 !important",
+    color: "white !important"
   },
   floatingLabelFocusStyle: {
-    color: '#f50057 !important'
+    color: "#f50057 !important"
   }
 };
 
 const Contact = ({ classes }) => {
   // const classes = useStyles();
   const styleIcons = {
-    color: 'black',
-    size: '2.5em'
+    color: "black",
+    size: "2.5em"
   };
 
   const [values, setValues] = useState({
-    name: '',
-    email: '',
-    message: '',
-    errorName: '',
-    errorEmail: '',
-    errorMessage: '',
-    messageResponse: ''
+    name: "",
+    email: "",
+    message: "",
+    errorName: "",
+    errorEmail: "",
+    errorMessage: "",
+    messageResponse: ""
   });
   const {
     name,
@@ -66,13 +66,13 @@ const Contact = ({ classes }) => {
   };
 
   const validateForm = () => {
-    let errorNameText = '';
-    let errorEmailText = '';
-    let errorMessageText = '';
+    let errorNameText = "";
+    let errorEmailText = "";
+    let errorMessageText = "";
 
-    if (!name) errorNameText = 'Please type your name.';
-    if (!/^\S+@\S+$/.test(email)) errorEmailText = 'Please type a valid email.';
-    if (!message) errorMessageText = 'Please write me a message';
+    if (!name) errorNameText = "Please type your name.";
+    if (!/^\S+@\S+$/.test(email)) errorEmailText = "Please type a valid email.";
+    if (!message) errorMessageText = "Please write me a message";
 
     setValues({
       ...values,
@@ -92,13 +92,13 @@ const Contact = ({ classes }) => {
     const isValid = validateForm();
     if (isValid)
       axios
-        .post('api/sendmail', { name, email, message })
+        .post("api/sendmail", { name, email, message })
         .then(success => {
           setValues({
             ...values,
-            name: '',
-            email: '',
-            message: '',
+            name: "",
+            email: "",
+            message: "",
             messageResponse: success.data
           });
         })
@@ -117,7 +117,7 @@ const Contact = ({ classes }) => {
       <form onSubmit={handleSubmit}>
         <TextField
           name="name"
-          onChange={handleChange('name')}
+          onChange={handleChange("name")}
           value={name}
           placeholder="Name."
           error={errorName ? true : false}
@@ -132,7 +132,7 @@ const Contact = ({ classes }) => {
         <br />
         <TextField
           name="email"
-          onChange={handleChange('email')}
+          onChange={handleChange("email")}
           // type='email'
           value={email}
           placeholder="Email."
@@ -148,7 +148,7 @@ const Contact = ({ classes }) => {
         <br />
         <TextField
           name="message"
-          onChange={handleChange('message')}
+          onChange={handleChange("message")}
           value={message}
           rows="8"
           multiline
